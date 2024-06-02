@@ -340,6 +340,7 @@
   position: relative;
   width: 1350px;
   height: 620px;
+  margin: 0 auto;
 }
 
 #gridwormCanvas {
