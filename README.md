@@ -1,3 +1,4 @@
+
 # Single-Page Resume Website
 
 This project is a single-page website that serves as an online resume. It provides a comprehensive overview of my professional background, skills, and contact information.
