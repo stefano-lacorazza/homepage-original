@@ -10,21 +10,28 @@
     <title>Résumé</title>
   </head>
   <body>
+    <button id="button">
+      <i class="fa fa-volume-up"></i>
+    </button>
     <a href="https://api.whatsapp.com/send?phone=573112873140&text=Hola."
     class="wpfloat" target="_blank">
     <i class="fa fa-whatsapp my-float fa-2x " style="padding-top: 10px;"></i>
   </a>
+  <audio src="assets/mario.mp3" ></audio>
+  <audio id="hoverSound" src="assets/powerup.mp3" preload="auto" autoplay></audio>
     <main>
       <!-- Main resume container -->
 
       <div class="resume-container">
         
 
+      
 
         <div class="resume">
           <div class="container">
             <div class="resume__block">
               <!-- Name and profession -->
+
               <h1 class="contact-info__header">Stefano Lacorazza</h1>
               <h3 class="contact-info__sub-header">Full-Stack Developer</h3>
       
@@ -75,7 +82,7 @@
       
                 <!-- Profile picture -->
                 <div class="contact-info__block contact-info__block--center">
-                  <img class="contact-info__avatar" src="assets/Stefano.jpg" alt="Avatar" />
+                  <img id = "profile-pic" class="contact-info__avatar" src="assets/Stefano.jpg" alt="Avatar" />
                 </div>
       
               </div>
