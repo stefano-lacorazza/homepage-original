@@ -40,6 +40,9 @@
     box-shadow: 1px 1px 7px 7px #f5f5f5;
     padding: 30px 0;
     max-width: 900px;
+    position: relative;
+    z-index: 2;
+    background-color: white;
   }
   
   .resume__block {
@@ -333,3 +336,17 @@
   margin-right: 10px;
 }
 
+.resume-container {
+  position: relative;
+  width: 1350px;
+  height: 620px;
+}
+
+#gridwormCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
