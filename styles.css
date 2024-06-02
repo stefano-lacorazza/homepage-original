@@ -272,3 +272,41 @@
     z-index: 100;
   }
   
+
+.projects {
+  flex: 1 1 60%;
+  margin-right: 50px;
+}
+
+.projects__header {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+
+.projects__project-header-name {
+  color: var(--primary-text-color);
+  text-decoration-color: var(--text-decoration-color);
+  text-decoration-line: underline;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.projects__project-role {
+  color: var(--durability-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.projects__company-project-name {
+  color: var(--primary-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.projects__project-description {
+  color: var(--secondary-text-color);
+  padding-left: 20px;
+}
