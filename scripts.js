@@ -376,24 +376,12 @@ class Painter
     getRandomColor(opacity)
     {
         var colors = [
-            `rgba(255,0,0,      ${opacity})`,//red
-            `rgba(255, 242,0,   ${opacity})`,//yellow, 
-            `rgba(0,0,255,      ${opacity})`,//blue
-            `rgba(255,255,0,    ${opacity})`,//yellow
-            `rgba(0,255,255,    ${opacity})`,//cyan
-            `rgba(255,0,255,    ${opacity})`,//magenta/fuchsia
-            `rgba(192,192,192,  ${opacity})`,//silver
-            `rgba(128,128,128,  ${opacity})`,//gray 
-            `rgba(128,0,0,      ${opacity})`,//maroon
-            `rgba(128,128,0,    ${opacity})`,//olive
-            `rgba(0,128,0,      ${opacity})`,//green
-            `rgba(128,0,128,    ${opacity})`,//purple 
-            `rgba(0,128,128,    ${opacity})`,//teal
-            `rgba(0,0,128,      ${opacity})`,//navy 
-            `rgba(0, 255, 0,    ${opacity})`,//green
-            `rgba(77, 0, 255,   ${opacity})`,//blue
-            `rgba(255, 0, 140,  ${opacity})`,//purple
-            `rgba(0,255,0,      ${opacity})`//lime
+            `rgba(0,0,0,     ${opacity})`,//black
+            `rgba(4,156,216,  ${opacity})`,//yellow, 
+            `rgba(251,208,0,      ${opacity})`,//blue
+            `rgba(229,37,33,    ${opacity})`,//yellow
+            `rgba(67,176,71,   ${opacity})`,//cyan
+
         ];
         return colors[parseInt(this.getRandomNumber(0, colors.length))];
     }
@@ -431,14 +419,7 @@ class Painter
     }  
     draw(ctx)
     {    
-        /*
-        for(var i = 0; i < this.points.length; i++)
-        {
-            let point = this.points[i];
-            ctx.fillStyle   = Math.random() > 0.5? this.color:'white';//creates a disco effect 
-            ctx.fillRect(point.x,point.y,this.interval,this.interval);
-        }
-        */
+
         this.gridWorms.forEach(function(gridworm)
         {
             gridworm.draw(ctx); 
