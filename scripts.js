@@ -496,27 +496,20 @@ function doAnimationLoop(timestamp)
 } 
 requestAnimationFrame(doAnimationLoop);
 
+
+
 var player = document.getElementById('mario')
-var powerup = {
-  audio: new Audio('http://themushroomkingdom.net/sounds/wav/smb/smb_powerup.wav'),
-  play: function() { 
-    this.audio.currentTime = 0;
-    this.audio.play() 
-  }
-}
+
+
 
 // Actualizamos la ubicación del personaje
 function updateElement(element, incx, incy) {
   var x = Number(element.getAttribute('data-x')) + incx
   var y = Number(element.getAttribute('data-y')) + incy
   
-  /*
-  // Ejemplo básico de límite de regiones
-  if ((x < 0) || (x > 600)) 
-    return
-  */
-  
-  element.style.transform = 'translate('+ x +'px, '+ y +'px)'
+
+  if ((x > 0) && (x < 800)) 
+    element.style.transform = 'translate('+ x +'px, '+ y +'px)'
   
   if (element.classList.contains('mirror'))
     element.style.transform += ' scaleX(-1)'
@@ -549,22 +542,15 @@ window.addEventListener('keydown', function(e) {
     updateElement(player, -speed, 0)
   }
   
-  if (e.keyCode == 85) {
-    player.classList.toggle('big')
-    //new Audio('http://themushroomkingdom.net/sounds/wav/smb/smb_powerup.wav').play()
-    powerup.play(); // fix network lag sound    
-    updateElement(player, 0, 0)
-  }
-  
+
+
 })
 
-// Cuando el usuario suelta una tecla
+
 window.addEventListener('keyup', function(e) {
-  // Eliminamos la clase caminar para detener la animación
-  // y que se detenga en el primer fotograma, como cuando no
-  // realiza animación.
+
   player.classList.remove('caminar')
 })
 
-// Inicialización
+
 updateElement(player, 0, 0)
