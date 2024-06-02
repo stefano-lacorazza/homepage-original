@@ -310,3 +310,26 @@
   color: var(--secondary-text-color);
   padding-left: 20px;
 }
+
+.skills__block {
+  border-bottom: 3px solid var(--border-color);
+  padding-bottom: 30px;
+  margin-bottom: 15px;
+}
+.skills__header {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-bottom: 20px;
+}
+.skills__list {
+  display: flex;
+  color: var(--secondary-text-color);
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills__item {
+  margin-right: 10px;
+}
+
